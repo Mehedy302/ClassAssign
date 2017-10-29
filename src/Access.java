@@ -1,22 +1,23 @@
- class A {
+ 
+class C {
 int i;
-private int j;
+protected int j;
 void setij(int x, int y) {
 i = x;
 j = y;
 }
 }
  
- class B extends A {
+ class D extends C {
 	 int total;
 	 void sum() {
 	 total = i + j;  //Here j is private so, it is not accessable.
 	 }
 	 }
  
- class Access {
+public  class Access {
 	 public static void main(String args[]) {
-	 B subOb = new B();
+	 D subOb = new D();
 	 subOb.setij(10, 12);
 	 subOb.sum();
 	 System.out.println("Total is " + subOb.total);
